@@ -60,10 +60,10 @@ ingress:
        - productservice.appdevops.work.gd
 
 env:
-  DB_USER: "postgres"
-  DB_HOST: "my-postgresql"
-  DB_NAME: "productsdb"
-  DB_PASSWORD: "DyrjeACnc2"
+  DB_USER: postgres
+  DB_HOST: my-postgresql
+  DB_NAME: productsdb
+  DB_PASSWORD: DyrjeACnc2
   DB_PORT: 5432
 
 resources: {}
