@@ -60,7 +60,7 @@ spec:
             - name: DB_PASSWORD
               value: {{ .Values.env.DB_PASSWORD }}
             - name: DB_PORT
-              value: {{ .Values.env.DB_PORT }}
+              value: "{{ .Values.env.DB_PORT }}"
       {{- with .Values.volumes }}
       volumes:
         {{- toYaml . | nindent 8 }}

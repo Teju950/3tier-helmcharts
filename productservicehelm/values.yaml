@@ -41,7 +41,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: "3001"
+  port: 3001
 
 ingress:
   enabled: true
@@ -64,7 +64,7 @@ env:
   DB_HOST: "my-postgresql"
   DB_NAME: "productsdb"
   DB_PASSWORD: "DyrjeACnc2"
-  DB_PORT: "5432"
+  DB_PORT: 5432
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
