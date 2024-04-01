@@ -50,17 +50,6 @@ spec:
           volumeMounts:
             {{- toYaml . | nindent 12 }}
           {{- end }}
-          env:
-            - name: DB_USER
-              value: {{ .Values.env.DB_USER }}
-            - name: DB_HOST
-              value: {{ .Values.env.DB_HOST }}
-            - name: DB_NAME
-              value: {{ .Values.env.DB_NAME }}
-            - name: DB_PASSWORD
-              value: {{ .Values.env.DB_PASSWORD }}
-            - name: DB_PORT
-              value: {{ .Values.env.DB_PORT }}
       {{- with .Values.volumes }}
       volumes:
         {{- toYaml . | nindent 8 }}
