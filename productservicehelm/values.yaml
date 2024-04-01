@@ -8,7 +8,7 @@ image:
   repository: teju792/product-service
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "tag22"
+  tag: "v1.0.0"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -58,6 +58,13 @@ ingress:
    - secretName: mytls-secret
      hosts:
        - productservice.appdevops.work.gd
+
+env:
+  DB_USER: "postgres"
+  DB_HOST: "my-postgresql"
+  DB_NAME: "productsdb"
+  DB_PASSWORD: "DyrjeACnc2"
+  DB_PORT: "5432"
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
