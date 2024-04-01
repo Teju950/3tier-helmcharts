@@ -8,7 +8,7 @@ image:
   repository: teju792/product-service
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.0"
+  tag: v1.0.0
 
 imagePullSecrets: []
 nameOverride: ""
@@ -41,7 +41,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 3001
+  port: "3001"
 
 ingress:
   enabled: true
@@ -60,11 +60,11 @@ ingress:
        - productservice.appdevops.work.gd
 
 env:
-  DB_USER: postgres
-  DB_HOST: my-postgresql
-  DB_NAME: productsdb
-  DB_PASSWORD: DyrjeACnc2
-  DB_PORT: 5432
+  DB_USER: "postgres"
+  DB_HOST: "my-postgresql"
+  DB_NAME: "productsdb"
+  DB_PASSWORD: "DyrjeACnc2"
+  DB_PORT: "5432"
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
