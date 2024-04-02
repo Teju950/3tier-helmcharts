@@ -50,6 +50,13 @@ spec:
           volumeMounts:
             {{- toYaml . | nindent 12 }}
           {{- end }}
+          env:
+            - name: PORT
+              value: "{{ .Values.env.PORT }}"
+            - name: PRODUCT_SERVICE_URL
+              value: "{{ .Values.env.PRODUCT_SERVICE_URL }}"
+            - name: PRODUCT_APP_URL
+              value: "{{ .Values.env.PRODUCT_APP_URL }}"
       {{- with .Values.volumes }}
       volumes:
         {{- toYaml . | nindent 8 }}
