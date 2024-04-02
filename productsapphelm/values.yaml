@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: teju792/productsapp
+  repository: teju792/products-appimg
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "tag11"
+  tag: "tag1.1"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -58,6 +58,9 @@ ingress:
    - secretName: mytls-secret
      hosts:
        - products.appdevops.work.gd
+  env:
+    PORT: 3002
+    PRODUCT_SERVICE_URL: "http://product-service1-productservicehelm:3001"    
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

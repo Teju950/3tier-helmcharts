@@ -40,6 +40,11 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          env:
+            - name: PORT
+              value: "{{ .Values.env.PORT }}"
+            - name: PRODUCT_SERVICE_URL
+              value: "{{ .Values.env.PRODUCT_SERVICE_URL }}"
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
           readinessProbe:
